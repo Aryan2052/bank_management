@@ -5,6 +5,8 @@ import java.awt.event.*; // to handle events like button clicks
 
 public class Login extends JFrame implements ActionListener {
 
+    JPasswordField pinText; // use JPasswordField for pin to hide the input
+    JTextField cardnoText; // declare the text fields as instance variables so that they can be accessed in the actionPerformed method
     JButton login, clear, signup; // declare the buttons as instance variables so that they can be accessed in the actionPerformed method
     //Login constructor
     Login(){
@@ -48,17 +50,19 @@ public class Login extends JFrame implements ActionListener {
         
 
         //adding textbox in front of cardno and pin
-        JTextField cardnoText = new JTextField();
+        cardnoText = new JTextField();
         cardnoText.setBounds(300, 150, 230, 30); 
+        cardnoText.setFont(new Font("Arial", Font.BOLD, 14)); // set the font of the JTextField
         add(cardnoText); // add the JTextField to the JFrame
 
         //adding textbox in front of cardno and pin
-        JTextField pinText = new JTextField();
+        pinText = new JPasswordField();
         pinText.setBounds(300, 220, 230, 30); 
+        pinText.setFont(new Font("Arial", Font.BOLD, 14)); 
         add(pinText); // add the JTextField to the JFrame
 
         //adding login button
-        JButton login = new JButton("Login");
+        login = new JButton("Login");
         login.setBounds(300, 300, 100, 30); // set the bounds of the JButton
         login.setBackground(Color.BLACK); // set the background color of the JButton
         login.setForeground(Color.WHITE); // set the text color on the button to white
@@ -66,15 +70,15 @@ public class Login extends JFrame implements ActionListener {
         add(login); // add the JButton to the JFrame
 
         //clear button
-        JButton clear = new JButton("Clear");
+        clear = new JButton("Clear");
         clear.setBounds(430, 300, 100, 30); // set the bounds of the JButton
         clear.setBackground(Color.BLACK); // set the background color of the JButton
         clear.setForeground(Color.WHITE);
         clear.addActionListener(this); // add an ActionListener to the JButton, so that it can handle button clicks
         add(clear); // add the JButton to the JFrame
 
-        //clear button
-        JButton signup = new JButton("Sign Up");
+        //signup button
+        signup = new JButton("Sign Up");
         signup.setBounds(300, 350, 230, 30); // set the bounds of the JButton
         signup.setBackground(Color.BLACK); // set the background color of the JButton
         signup.setForeground(Color.WHITE);
@@ -95,6 +99,15 @@ public class Login extends JFrame implements ActionListener {
         //so when we use the actionListener interface, we need to override the actionPerformed method
         //the actionPerformed method is abstrcat in nature, it is just declared not defined
         //we will tell what will happen when we click the button
+
+        if(ae.getSource()==clear){
+            cardnoText.setText(""); // clear the text in the cardnoText field on clicking clear button
+            pinText.setText(""); // clear the text in the pinText field
+        }else if(ae.getSource()==login){
+
+        }else if(ae.getSource()==signup){
+
+        }
 
     }
 
