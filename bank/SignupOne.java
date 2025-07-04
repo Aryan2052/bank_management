@@ -29,11 +29,21 @@ public class SignupOne extends JFrame {
         name.setBounds(100, 140, 100, 30); // set the position and size of the label
         add(name); // add the label to the JFrame
 
+        JTextField nameField = new JTextField(); // create a text field for the name
+        nameField.setFont(new Font("Raleway", Font.BOLD, 14)); // set the font of the text field
+        nameField.setBounds(300, 140, 400, 30); // set the position and size of the text field
+        add(nameField); // add the text field to the JFrame
+
 
         JLabel fname = new JLabel("Fathers name: "); // create a label for the form number
         fname.setFont(new Font("Raleway", Font.BOLD, 20)); // set the font of the label
         fname.setBounds(100, 190, 200, 30); // set the position and size of the label
         add(fname); // add the label to the JFrame
+
+        JTextField fnameField = new JTextField(); // create a text field for the name
+        fnameField.setFont(new Font("Raleway", Font.BOLD, 14)); // set the font of the text field
+        fnameField.setBounds(300, 190, 400, 30); // set the position and size of the text field
+        add(fnameField); // add the text field to the JFrame
 
         JLabel dob = new JLabel("Date of birth: "); // create a label for the form number
         dob.setFont(new Font("Raleway", Font.BOLD, 20)); // set the font of the label
@@ -50,6 +60,11 @@ public class SignupOne extends JFrame {
         email.setBounds(100, 340, 200, 30); // set the position and size of the label
         add(email); // add the label to the JFrame
 
+        JTextField emailField = new JTextField(); // create a text field for the name
+        emailField.setFont(new Font("Raleway", Font.BOLD, 14)); // set the font of the text field
+        emailField.setBounds(300, 340, 400, 30); // set the position and size of the text field
+        add(emailField); // add the text field to the JFrame
+
         JLabel marital = new JLabel("Marital Status: "); // create a label for the form number
         marital.setFont(new Font("Raleway", Font.BOLD, 20)); // set the font of the label
         marital.setBounds(100, 390, 200, 30); // set the position and size of the label
@@ -60,20 +75,40 @@ public class SignupOne extends JFrame {
         address.setBounds(100, 440, 200, 30); // set the position and size of the label
         add(address); // add the label to the JFrame
 
+        JTextField addressField = new JTextField(); // create a text field for the name
+        addressField.setFont(new Font("Raleway", Font.BOLD, 14)); // set the font of the text field
+        addressField.setBounds(300, 440, 400, 30); // set the position and size of the text field
+        add(addressField); // add the text field to the JFrame
+
         JLabel city = new JLabel("City: "); // create a label for the form number
         city.setFont(new Font("Raleway", Font.BOLD, 20)); // set the font of the label
         city.setBounds(100, 490, 200, 30); // set the position and size of the label
         add(city); // add the label to the JFrame
+
+        JTextField cityField = new JTextField(); // create a text field for the name
+        cityField.setFont(new Font("Raleway", Font.BOLD, 14)); // set the font of the text field
+        cityField.setBounds(300, 490, 400, 30); // set the position and size of the text field
+        add(cityField); // add the text field to the JFrame
 
         JLabel state = new JLabel("State: "); // create a label for the form number
         state.setFont(new Font("Raleway", Font.BOLD, 20)); // set the font of the label
         state.setBounds(100, 540, 200, 30); // set the position and size of the label
         add(state); // add the label to the JFrame
 
-        JLabel country = new JLabel("Country: "); // create a label for the form number
-        country.setFont(new Font("Raleway", Font.BOLD, 20)); // set the font of the label
-        country.setBounds(100, 590, 200, 30); // set the position and size of the label
-        add(country); // add the label to the JFrame
+        JTextField stateField = new JTextField(); // create a text field for the name
+        stateField.setFont(new Font("Raleway", Font.BOLD, 14)); // set the font of the text field
+        stateField.setBounds(300, 540, 400, 30); // set the position and size of the text field
+        add(stateField); // add the text field to the JFrame
+
+        JLabel Pincode = new JLabel("Pincode: "); // create a label for the form number
+        Pincode.setFont(new Font("Raleway", Font.BOLD, 20)); // set the font of the label
+        Pincode.setBounds(100, 590, 200, 30); // set the position and size of the label
+        add(Pincode); // add the label to the JFrame
+
+        JTextField pinField = new JTextField(); // create a text field for the name
+        pinField.setFont(new Font("Raleway", Font.BOLD, 14)); // set the font of the text field
+        pinField.setBounds(300, 590, 400, 30); // set the position and size of the text field
+        add(pinField); // add the text field to the JFrame
         
         
         getContentPane().setBackground(java.awt.Color.WHITE); // set the background color of the JFrame
