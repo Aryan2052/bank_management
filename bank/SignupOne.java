@@ -2,6 +2,7 @@ package bank;
 import javax.swing.*; // to make ui
 import java.awt.*; // to set the background color of the JFrame
 import java.util.*;
+import com.toedter.calendar.JDateChooser; // to make a date chooser
 
 public class SignupOne extends JFrame {
 
@@ -49,6 +50,10 @@ public class SignupOne extends JFrame {
         dob.setFont(new Font("Raleway", Font.BOLD, 20)); // set the font of the label
         dob.setBounds(100, 240, 200, 30); // set the position and size of the label
         add(dob); // add the label to the JFrame
+
+        JDateChooser dateChooser = new JDateChooser(); // create a date chooser for the date of birth
+        dateChooser.setBounds(300, 240, 400, 30); // set the position and size of the date chooser
+        add(dateChooser); // add the date chooser to the JFrame
 
         JLabel gender = new JLabel("Gender: "); // create a label for the form number
         gender.setFont(new Font("Raleway", Font.BOLD, 20)); // set the font of the label
