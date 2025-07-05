@@ -2,7 +2,7 @@ package bank;
 import javax.swing.*; // to make ui
 import java.awt.*; // to set the background color of the JFrame
 import java.util.*;
-import com.toedter.calendar.JDateChooser; // to make a date chooser
+
 
 public class SignupOne extends JFrame {
 
@@ -51,9 +51,35 @@ public class SignupOne extends JFrame {
         dob.setBounds(100, 240, 200, 30); // set the position and size of the label
         add(dob); // add the label to the JFrame
 
-        JDateChooser dateChooser = new JDateChooser(); // create a date chooser for the date of birth
-        dateChooser.setBounds(300, 240, 400, 30); // set the position and size of the date chooser
-        add(dateChooser); // add the date chooser to the JFrame
+        // Date dropdown components
+        String[] days = new String[31];
+        for(int i = 1; i <= 31; i++) {
+            days[i-1] = String.valueOf(i);
+        }
+        
+        String[] months = {"January", "February", "March", "April", "May", "June", 
+                          "July", "August", "September", "October", "November", "December"};
+        
+        String[] years = new String[50];
+        int currentYear = Calendar.getInstance().get(Calendar.YEAR);
+        for(int i = 0; i < 50; i++) {
+            years[i] = String.valueOf(currentYear - i);
+        }
+        
+        JComboBox<String> dayCombo = new JComboBox<>(days);
+        dayCombo.setBounds(300, 240, 80, 30);
+        dayCombo.setBackground(Color.WHITE);
+        add(dayCombo);
+        
+        JComboBox<String> monthCombo = new JComboBox<>(months);
+        monthCombo.setBounds(390, 240, 120, 30);
+        monthCombo.setBackground(Color.WHITE);
+        add(monthCombo);
+        
+        JComboBox<String> yearCombo = new JComboBox<>(years);
+        yearCombo.setBounds(520, 240, 80, 30);
+        yearCombo.setBackground(Color.WHITE);
+        add(yearCombo);
 
         JLabel gender = new JLabel("Gender: "); // create a label for the form number
         gender.setFont(new Font("Raleway", Font.BOLD, 20)); // set the font of the label
