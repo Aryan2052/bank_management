@@ -60,9 +60,9 @@ public class SignupOne extends JFrame {
         String[] months = {"January", "February", "March", "April", "May", "June", 
                           "July", "August", "September", "October", "November", "December"};
         
-        String[] years = new String[50];
+        String[] years = new String[100];
         int currentYear = Calendar.getInstance().get(Calendar.YEAR);
-        for(int i = 0; i < 50; i++) {
+        for(int i = 0; i < 100; i++) {
             years[i] = String.valueOf(currentYear - i);
         }
         
@@ -86,6 +86,23 @@ public class SignupOne extends JFrame {
         gender.setBounds(100, 290, 200, 30); // set the position and size of the label
         add(gender); // add the label to the JFrame
 
+        //radio buttons
+        JRadioButton male = new JRadioButton("Male");
+        male.setBounds(300, 290, 60, 30); // set the position and size of the radio button
+        male.setBackground(Color.WHITE); // set the background color of the radio button
+        add(male); // add the radio button to the JFrame
+
+        JRadioButton female = new JRadioButton("Female");
+        female.setBounds(450, 290, 70, 30); // set the position and size of the radio button
+        female.setBackground(Color.WHITE);
+        add(female); // add the radio button to the JFrame
+
+        //earlier when we clicked the radio button we could select both male female simultaneously
+        ButtonGroup genderGroup = new ButtonGroup(); // create a button group to group the radio buttons
+        genderGroup.add(male);
+        genderGroup.add(female);
+
+
         JLabel email = new JLabel("Email: "); // create a label for the form number
         email.setFont(new Font("Raleway", Font.BOLD, 20)); // set the font of the label
         email.setBounds(100, 340, 200, 30); // set the position and size of the label
@@ -100,6 +117,28 @@ public class SignupOne extends JFrame {
         marital.setFont(new Font("Raleway", Font.BOLD, 20)); // set the font of the label
         marital.setBounds(100, 390, 200, 30); // set the position and size of the label
         add(marital); // add the label to the JFrame
+
+        //radio buttons
+        JRadioButton married = new JRadioButton("Married");
+        married.setBounds(300, 390, 100, 30); // set the position and size of the radio button
+        married.setBackground(Color.WHITE); // set the background color of the radio button
+        add(married); // add the radio button to the JFrame
+
+        JRadioButton unmarried = new JRadioButton("Unmarried");
+        unmarried.setBounds(450, 390, 100, 30); // set the position and size of the radio button
+        unmarried.setBackground(Color.WHITE);
+        add(unmarried); // add the radio button to the JFrame
+
+        JRadioButton other = new JRadioButton("Other");
+        other.setBounds(630, 390, 100, 30); // set the position and size of the radio button
+        other.setBackground(Color.WHITE);
+        add(other); // add the radio button to the JFrame
+
+        //earlier when we clicked the radio button we could select both male female simultaneously
+        ButtonGroup maritalGroup = new ButtonGroup(); // create a button group to group the radio buttons
+        maritalGroup.add(married);
+        maritalGroup.add(unmarried);
+        maritalGroup.add(other);
 
         JLabel address = new JLabel("Address: "); // create a label for the form number
         address.setFont(new Font("Raleway", Font.BOLD, 20)); // set the font of the label
