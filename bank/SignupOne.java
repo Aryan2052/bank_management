@@ -179,6 +179,13 @@ public class SignupOne extends JFrame {
         pinField.setFont(new Font("Raleway", Font.BOLD, 14)); // set the font of the text field
         pinField.setBounds(300, 590, 400, 30); // set the position and size of the text field
         add(pinField); // add the text field to the JFrame
+
+        JButton next = new JButton("Next"); // create a button for the next page
+        next.setBackground(Color.BLACK); // set the background color of the button
+        next.setForeground(Color.WHITE); // set the text color of the button
+        next.setFont(new Font("Raleway", Font.BOLD, 14)); // set the bounds
+        next.setBounds(620, 660, 80, 30); // set the position and
+        add(next); // add the button to the JFrame
         
         
         getContentPane().setBackground(java.awt.Color.WHITE); // set the background color of the JFrame
