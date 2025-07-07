@@ -118,11 +118,3 @@ The **ATM Simulator System** serves as a robust educational tool for understandi
 - Software architecture principles
 
 ```
-
-Let me know if you also want:
-
-* Screenshots section
-* Setup & installation instructions
-* Demo video/GIF embedding
-* Contribution & license section
-  I’d be happy to expand the `README.md`!
