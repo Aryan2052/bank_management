@@ -1,6 +1,3 @@
-Here's your content converted into a professional and well-structured `README.md` format for your **ATM Simulator System** project:
-
----
 
 ```markdown
 # 🏧 ATM Simulator System
@@ -120,9 +117,6 @@ The **ATM Simulator System** serves as a robust educational tool for understandi
 - MySQL database integration  
 - Software architecture principles
 
-Perfect for learners, developers, and educators alike.
-
----
 ```
 
 Let me know if you also want:
